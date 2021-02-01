@@ -15,6 +15,7 @@ export interface PayPalButtonProps {
     onError?: Function,
     createOrder?: Function,
     createSubscription?: Function,
+    createBillingAgreement?: Function,
     onApprove?: Function,
     style?: object,
     options?: PaypalOptions,
@@ -57,6 +58,7 @@ class PayPalButton extends React.Component<PayPalButtonProps, PayPalButtonState>
         onError: PropTypes.func,
         createOrder: PropTypes.func,
         createSubscription: PropTypes.func,
+        createBillingAgreement: PropTypes.func,
         onApprove: PropTypes.func,
         style: PropTypes.object,
         options: PropTypes.shape({
@@ -168,6 +170,7 @@ class PayPalButton extends React.Component<PayPalButtonProps, PayPalButtonState>
             onSuccess,
             createOrder,
             createSubscription,
+            createBillingAgreement,
             onApprove,
             style,
         } = this.props;
@@ -195,6 +198,7 @@ class PayPalButton extends React.Component<PayPalButtonProps, PayPalButtonState>
                 {...this.props}
                 createOrder={createSubscription ? undefined : createOrderFn}
                 createSubscription={createSubscription}
+                createBillingAgreement={createBillingAgreement}
                 onApprove={
                     onSuccess
                         ? (data: any, actions: any) => this.onApprove(data, actions)
@@ -229,7 +233,7 @@ class PayPalButton extends React.Component<PayPalButtonProps, PayPalButtonState>
         script.onerror = () => {
             throw new Error("Paypal SDK could not be loaded.");
         };
-    
+
         document.body.appendChild(script);
     }
 }
