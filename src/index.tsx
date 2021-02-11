@@ -196,7 +196,7 @@ class PayPalButton extends React.Component<PayPalButtonProps, PayPalButtonState>
         return (
             <Button
                 {...this.props}
-                createOrder={createSubscription ? undefined : createOrderFn}
+                createOrder={(createSubscription || createBillingAgreement) ? undefined : createOrderFn}
                 createSubscription={createSubscription}
                 createBillingAgreement={createBillingAgreement}
                 onApprove={

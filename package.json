@@ -1,6 +1,6 @@
 {
-    "name": "react-paypal-button-v2",
-    "version": "2.6.3",
+    "name": "react-paypal-billing-agreement-button",
+    "version": "2.6.4",
     "description": "An easy and simple to use React button component to implement PayPal's Checkout with Smart Payment Buttons V2 (Version 2).",
     "keywords": [
         "react-paypal-button-v2",
@@ -22,7 +22,7 @@
         "Lue Hang",
         "luehang"
     ],
-    "homepage": "https://luehangs.site/lue_hang/projects/react-paypal-button-v2",
+    "homepage": "https://github.com/KanisiTech/react-paypal-button-v2",
     "author": {
         "name": "Lue Hang",
         "email": "lue_hang@hotmail.com",
@@ -30,10 +30,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Luehang/react-paypal-button-v2"
+        "url": "https://github.com/KanisiTech/react-paypal-button-v2"
     },
     "bugs": {
-        "url": "https://github.com/Luehang/react-paypal-button-v2/issues"
+        "url": "https://github.com/KanisiTech/react-paypal-button-v2/issues"
     },
     "directories": {
         "example": "./example",
